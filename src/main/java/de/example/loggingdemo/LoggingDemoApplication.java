@@ -24,18 +24,27 @@ public class LoggingDemoApplication {
     @Scheduled(fixedRate = 1000)
     private void logSomething() {
         int i = (int) (Math.random() * 4);
+        int k = (int) (Math.random() * 100);
         switch (i) {
             case 0:
-                logger.info("This is an info message");
+                if (k > 30) {
+                    logger.info("This is an info message\nit spans several\nlines");
+                }
                 break;
             case 1:
-                logger.error("This is an error message");
+                if (k > 90) {
+                    logger.error("This is an error message");
+                }
                 break;
             case 2:
-                logger.debug("This is a debug message");
+                if (k > 50) {
+                    logger.debug("This is a debug message");
+                }
                 break;
             case 3:
-                throw new NullPointerException();
+                if (k > 90) {
+                    throw new NullPointerException();
+                }
             default:
                 logger.trace("Nothing to debug...");
                 break;

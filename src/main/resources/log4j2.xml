@@ -3,13 +3,12 @@
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
             <JsonLayout compact="true" eventEol="true" stacktraceAsString="true">
-                <KeyValuePair key="myTestField" value="tada"/>
-                <KeyValuePair key="mySecondField" value="$${ctx:key}"/>
+
             </JsonLayout>
         </Console>
     </Appenders>
     <Loggers>
-        <Root level="INFO">
+        <Root level="DEBUG">
             <AppenderRef ref="Console"/>
         </Root>
     </Loggers>
