@@ -69,6 +69,9 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>1.2.0</version>
                 <configuration>
+                    <container>
+                        <useCurrentTimestamp>true</useCurrentTimestamp>
+                    </container>
                     <to>
                         <image>dockerregistryaks.azurecr.io/logging-demo:latest</image>
                     </to>

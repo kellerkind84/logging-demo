@@ -28,7 +28,7 @@ public class LoggingDemoApplication {
         switch (i) {
             case 0:
                 if (k > 30) {
-                    logger.info("This is an info message\nit spans several\nlines");
+                    logger.info("This is the new and improved info message\nit spans several\nlines");
                 }
                 break;
             case 1:
